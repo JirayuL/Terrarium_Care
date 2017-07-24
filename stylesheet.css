@@ -48,8 +48,13 @@ h5{
 	border-radius : 50px;
 }
 
-textarea{
+.text_a{
 	background-color: white !important;
+	width : 80px;
+	height : 40px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 20px;
+	text-align: center;
 }
 
 .footer{

@@ -2,25 +2,28 @@
 <html>
 
 <head>
-  <title>ZEEDWea Project</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-CJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  <script src="index.js"></script>
+    <title>ZEEDWea Project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-CJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body style="background-color : #d3e29d">
-  <nav>
-    <div class="nav-wrapper" style="background: linear-gradient(#c48430,#b88747); height : 70px;">
-      <a href="#" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
-    </div>
-  </nav>
+    <nav>
+        <div class="nav-wrapper" style="background: linear-gradient(#c48430,#b88747); height : 70px;">
+            <a href="#" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
+        </div>
+    </nav>
 
   <div class="alert alert-danger" role="alert" style="display:none" id="lotemp"><strong>Low Temperature!</strong> Terrarium needs a warm place.</div>
   <div class="alert alert-danger" role="alert" style="display:none" id="hitemp"><strong>High Temperature!</strong> Terrarium needs a cool place.</div>
@@ -29,90 +32,88 @@
   <div class="alert alert-danger" role="alert" style="display:none" id="lolightal"><strong>Low Light!</strong> Terrarium needs light.</div>
   <div class="alert alert-danger" role="alert" style="display:none" id="hilightal"><strong>Too Bright!</strong> Terrarium needs shade.</div>
 
-  <div class="section">
-    <div class="row">
-      <div class="col-md-8"></div>
+    <div class="section">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="container">
+                <div class="section" style="text-align : center;">
+                    <img src="png/giphyy.gif" width="200px" height="150px">
+                    <m>Terrarium Care</m>
+                    <img src="png/giphyy.gif" width="200px" height="150px">
+                </div>
+                <div class="section">
+                    <div class="row">
+                        <div class="col-md-12" style="background-color : #FBDAAD;">
+                            <div class="col-md-4" style="text-align: center;">
+                                <a href="index2.html"><button style="border: none;"> <br><img src = "png/001-love-plant.png" width="300px" height="300px" style="margin : 10px;"></button></a><br><br>
+                            </div>
+                            <div class="col-md-8" style="text-align: left;">
+                                <p style="color : green; margin-top : 20%;">See the profile of your Terrarium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" style="text-align : right;">
+                    <div class="row">
+                        <div class="col-md-12" style="background-color : #FCBBC2;">
+                            <div class="col-md-8" style="text-align : right;">
+                                <p style="color : red; margin-top : 10%;">See the temperature inside of Terrarium</p><br>
+                                <n>Temperature Now</n> <textarea disabled class="text_a" id="tempNow" style="margin-left:20px; border-radius : 10px;"
+                                    ;></textarea><br>
+                            </div>
+                            <div class="col-md-4" style="text-align : center;">
+                                <button style="border: none; margin-top : 15px;"> <br><img src = "png/005-temperature-2.png" width="300px" height="300px"></button><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-      <div class="container">
-        <div class="section" style="text-align : center;">
-          <img src="png/giphyy.gif" width="200px" height="150px">
-          <m>Terrarium Care</m>
-          <img src="png/giphyy.gif" width="200px" height="150px">
-        </div>
-        <div class="section">
-          <div class="row">
-            <div class="col-md-12" style="background-color : #FBDAAD;">
-              <div class="col-md-4" style="text-align: center;">
-                <a href="index2.html"><button style="border: none;"> <br><img src = "png/001-love-plant.png" width="300px" height="300px" style="margin : 10px;"></button></a><br><br>
-              </div>
-              <div class="col-md-8" style="text-align: left;">
-                <p style="color : green; margin-top : 20%;">See the profile of your Terrarium</p>
-              </div>
+                <div class="section">
+                    <div class="row">
+                        <div class="col-md-12" style="background-color : #FCFBB6;">
+                            <div class="col-md-4" style="text-align: center;">
+                                <button style="border: none;margin-top : 15px;"> <br><img src = "png/008-summer.png" width="300px" height="300px"></button><br><br>
+                            </div>
+                            <div class="col-md-8" style="text-align: left;">
+                                <p style="color : #E6DE06; margin-top : 10%;">See the Light Intensity that the plants received</p><br>
+                                <n>Light Intensity Now</n><textarea disabled class="text_a" id="lightNow" style="margin-left:20px; border-radius : 10px;"
+                                    ;></textarea><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" style="text-align : right;">
+                    <div class="row">
+                        <div class="col-md-12" style="background-color : #B6FCF4;">
+                            <div class="col-md-8">
+                                <p style="color : #0CA9D5; margin-top : 10%;">See the humidity in the Terrarium</p><br>
+                                <n>Humidity Now</n><textarea disabled class="text_a" id="humNow" style="margin-left:20px; border-radius : 10px;"
+                                    ;></textarea><br>
+                            </div>
+                            <div class="col-md-4" style="text-align : center;">
+                                <button style="border: none; margin-top : 15px;"> <br><img src = "png/004-nature-1.png" width="300px" height="300px"></button><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" style="text-align : left;">
+                    <div class="row">
+                        <div class="col-md-12" style="background-color : #CC9466;">
+                            <div class="col-md-4">
+                                <button style="border: none; margin-top : 15px;"> <br><img src = "png/soil.gif" width="300px" height="300px"></button><br><br>
+                            </div>
+                            <div class="col-md-8" style="text-align : left;">
+                                <p style="color : #B8590A; margin-top : 10%;">See the moisture in the soil</p><br>
+                                <n>Soil Moisture Now</n><textarea disabled class="text_a" id="soilNow" style="margin-left:20px; border-radius : 10px;"
+                                    ;></textarea><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
-        <div class="section" style="text-align : right;">
-          <div class="row">
-            <div class="col-md-12" style="background-color : #FCBBC2;">
-              <div class="col-md-8" style="text-align : right;">
-                <!-- <div id="chartContainer" style="height: 300px; width:60%;"> -->
-                <p style="color : red; margin-top : 10%;">See the temperature inside of Terrarium</p><br>
-                <n>Temperature Now</n> <textarea disabled class="text_a" id="tempNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-                <n>Temperature Average</n> <textarea disabled class="text_a" id="tempAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea>
-              </div>
-              <div class="col-md-4" style="text-align : center;">
-                <button style="border: none; margin-top : 15px;"> <br><img src = "png/005-temperature-2.png" width="300px" height="300px"></button><br><br>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="row">
-            <div class="col-md-12" style="background-color : #FCFBB6;">
-              <div class="col-md-4" style="text-align: center;">
-                <button style="border: none;margin-top : 15px;"> <br><img src = "png/008-summer.png" width="300px" height="300px"></button><br><br>
-              </div>
-              <div class="col-md-8" style="text-align: left;">
-                <p style="color : #E6DE06; margin-top : 10%;">See the Light Intensity that the plants received</p><br>
-                <n>Light Intensity Now</n><textarea disabled class="text_a" id="lightNow" style="margin-left:75px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-                <n>Light Intensity Average</n><textarea disabled class="text_a" id="lightAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section" style="text-align : right;">
-          <div class="row">
-            <div class="col-md-12" style="background-color : #B6FCF4;">
-              <div class="col-md-8">
-                <p style="color : #0CA9D5; margin-top : 10%;">See the humidity in the Terrarium</p><br>
-                <n>Humidity Now</n><textarea disabled class="text_a" id="humNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-                <n>Humidity Average</n><textarea disabled class="text_a" id="humAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-              </div>
-              <div class="col-md-4" style="text-align : center;">
-                <button style="border: none; margin-top : 15px;"> <br><img src = "png/004-nature-1.png" width="300px" height="300px"></button><br><br>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section" style="text-align : left;">
-          <div class="row">
-            <div class="col-md-12" style="background-color : #CC9466;">
-              <div class="col-md-4">
-                <button style="border: none; margin-top : 15px;"> <br><img src = "png/soil.gif" width="300px" height="300px"></button><br><br>
-              </div>
-              <div class="col-md-8" style="text-align : left;">
-                <p style="color : #B8590A; margin-top : 10%;">See the moisture in the soil</p><br>
-                <n>Soil Moisture Now</n><textarea disabled class="text_a" id="soilNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-                <n>Soil Moisture Average</n><textarea disabled class="text_a" id="soilAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
   <footer>
     <nav>
       <div class="nav-wrapper" style="background-color: #b88747">

@@ -42,14 +42,14 @@ setInterval(() => {
       url: link + "/temp"
     }).done((data) => {
       // $("#tempNow").val(data + "°C");
-      if (data < 10) {
-        // document.getElementById("lohumal").style.display = "initial";
-        alert("The temperature is too low. Terrarium needs a warm place.");
-      }
-      if (data > 30) {
-        // document.getElementById("hihumal").style.display = "initial";
-        alert("The temperature is too high. Terrarium needs a cool place.");
-      }
+      // if (data < 10) {
+      //   // document.getElementById("lohumal").style.display = "initial";
+      //   alert("The temperature is too low. Terrarium needs a warm place.");
+      // }
+      // if (data > 30) {
+      //   // document.getElementById("hihumal").style.display = "initial";
+      //   alert("The temperature is too high. Terrarium needs a cool place.");
+      // }
       document.getElementById('tempNow').innerHTML = data + "°C";
     }).fail(() => {
       console.error("Temp is wrong.");
@@ -78,12 +78,12 @@ setInterval(() => {
     }).done((data) => {
       // $("#humNow").val(data + "%");
       document.getElementById('humNow').innerHTML = data + "%";
-      if (data < 40) {
-        alert("The humidity is too low. Terrarium needs watering.");
-      }
-      if (data > 70) {
-          alert("The humidity is too high. Terrarium needs dehydrating.");
-      }
+      // if (data < 40) {
+      //   alert("The humidity is too low. Terrarium needs watering.");
+      // }
+      // if (data > 70) {
+      //     alert("The humidity is too high. Terrarium needs dehydrating.");
+      // }
     }).fail(() => {
       console.error("Humidity is wrong.");
     })
@@ -98,12 +98,12 @@ setInterval(() => {
     }).done((data) => {
       // $("#soilNow").val(data + "%");
       document.getElementById('soilNow').innerHTML = data + "%";
-      if (data < 20) {
-        alert("The soil moisture is too low. Terrarium needs watering.");
-      }
-      if (data > 70) {
-        alert("The soil moisture is too high. Terrarium needs dehydrating.");
-      }
+      // if (data < 20) {
+      //   alert("The soil moisture is too low. Terrarium needs watering.");
+      // }
+      // if (data > 70) {
+      //   alert("The soil moisture is too high. Terrarium needs dehydrating.");
+      // }
     }).fail(() => {
       console.error("Soil moisture is wrong.");
     })
@@ -118,12 +118,12 @@ setInterval(() => {
     }).done((data) => {
       // $("#lightNow").val(data + "lx");
       document.getElementById('lightNow').innerHTML = data + " lx";
-      if (data < 200) {
-        alert("The light is so low. Terrarium needs light.");
-      }
-      if (data > 700) {
-        alert("The light is so bright. Terrarium needs shade.");
-      }
+      // if (data < 200) {
+      //   alert("The light is so low. Terrarium needs light.");
+      // }
+      // if (data > 700) {
+      //   alert("The light is so bright. Terrarium needs shade.");
+      // }
     }).fail(() => {
       console.error("Light sensor is wrong.");
     })
@@ -146,53 +146,3 @@ function on2() {
 function off2() {
   document.getElementById("overlay2").style.display = "none";
 }
-
-// window.onload = function() {
-//
-//   var dps = []; // dataPoints
-//
-//   var chart = new CanvasJS.Chart("chartContainer", {
-//     title: {
-//       text: "Temperature",
-//     },
-//     data: [{
-//       type: "line",
-//       dataPoints: dps
-//     }],
-//     backgroundColor: "transparent"
-//   });
-//
-//   var xVal = 0;
-//   var yVal = 50;
-//   var updateInterval = 100;
-//   var dataLength = 500; // number of dataPoints visible at any point
-//
-//   var updateChart = function(count) {
-//     count = count || 1;
-//     // count is number of times loop runs to generate random dataPoints.
-//
-//     for (var j = 0; j < count; j++) {
-//       yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-//       dps.push({
-//         x: xVal,
-//         y: yVal
-//       });
-//       xVal++;
-//     };
-//     if (dps.length > dataLength) {
-//       dps.shift();
-//     }
-//
-//     chart.render();
-//
-//   };
-//
-//   // generates first set of dataPoints
-//   updateChart(dataLength);
-//
-//   // update chart after specified time.
-//   setInterval(function() {
-//     updateChart()
-//   }, updateInterval);
-//
-// }
