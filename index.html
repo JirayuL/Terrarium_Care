@@ -1,31 +1,41 @@
 <html>
 
 <head>
-    <title>Rally Interactive</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-CJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="index.js"></script>
+  <title>Rally Interactive</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-CJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="index.js"></script>
 </head>
 
 <body style="background-color : #acc584">
-    <nav>
-        <div class="nav-wrapper" style="background-color: #b88747; height : 70px;">
-            <a href="#" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
-        </div>
-    </nav>
-    <div class="container">
+  <nav>
+    <div class="nav-wrapper" style="background-color: #b88747; height : 70px;">
+      <a href="#" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
+    </div>
+  </nav>
+
+  <div class="alert alert-danger" role="alert" style="display:none" id="lohumal"><strong>Low Humidity!</strong> Terrarium needs watering.</div>
+  <div class="alert alert-danger" role="alert" style="display:none" id="hihumal"><strong>Too High Humidity!</strong> Terrarium needs dehydrating.</div>
+  <div class="alert alert-danger" role="alert" style="display:none" id="lolightal"><strong>Low Light!</strong> Terrarium needs light.</div>
+  <div class="alert alert-danger" role="alert" style="display:none" id="hilightal"><strong>Too High Light!</strong> Terrarium needs shade.</div>
+
+  <div class="divider"></div>
+
+  <div class="divider"></div>
+  <div class="section">
+    <div class="row">
+      <div class="col-md-8"></div>
+
+      <div class="container">
         <div class="section" style="text-align : center;">
-            <m>Terrarium Care</m>
+          <m>Terrarium Care</m>
         </div>
         <div class="section">
             <div class="row">
@@ -39,6 +49,7 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
         <div class="section" style="text-align : right;">
             <div class="row">
@@ -57,6 +68,7 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
         <div class="section">
             <div class="row">
@@ -74,6 +86,7 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
         <div class="section" style="text-align : right;">
             <div class="row">
@@ -91,15 +104,16 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
-    </div>
-    <footer>
+      </div>
+      <footer>
         <nav>
-            <div class="nav-wrapper" style="background-color: #b88747">
-                <a href="#" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
-            </div>
+          <div class="nav-wrapper" style="background-color: #b88747">
+            <a href="#" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
+          </div>
         </nav>
-    </footer>
+      </footer>
 </body>
 
 </html>
