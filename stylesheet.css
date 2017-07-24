@@ -96,7 +96,9 @@ h5{
     position: absolute;
     top: 50%;
     left: 50%;
-		font-size: 35px;
+		font-size: 50px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
+
