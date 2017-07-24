@@ -50,7 +50,7 @@ function main() {
   }, 1000)
 
   // light sensor
-  // mock optimist lightsensor =
+  // mock optimist lightsensor = lux
   setInterval(() => {
     $.ajax({
       // "key" : "value"
