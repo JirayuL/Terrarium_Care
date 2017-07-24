@@ -5,8 +5,9 @@ k{
 m{
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-size : 70px;
-	color: #b88909;
+	color: #435711;
 	border: 2px;
+	text-shadow: 0.1em 0.1em 0.05em #d3dc82;
 }
 
 p{
@@ -49,4 +50,10 @@ h5{
 
 textarea{
 	background-color: white !important;
+}
+
+.footer{
+	text-shadow: 0.1em 0.1em 0.05em #656161;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background: linear-gradient(#c48430,#b88747);
 }
