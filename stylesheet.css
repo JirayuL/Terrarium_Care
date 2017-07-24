@@ -1,3 +1,22 @@
+k{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+m{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size : 50px;
+}
+
+p{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size : 35px;
+}
+
+n{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size : 35px;
+}
+
 button{
 	border-radius: 50%;
 }
@@ -11,10 +30,23 @@ li{
 }
 
 .section{
-	border-bottom : solid 3px;
+
+	border-color : #b0bbb4; 
 	
+}
+
+.divider{
+	border-color: #b0bbb4;
 }
 
 textarea{
 	resize: none;
+}
+
+.brand-logo{ 
+	 text-shadow: 0.1em 0.1em 0.05em #656161; 
+}
+
+h5{
+	text-shadow: 0.1em 0.1em 0.05em #656161; 
 }
