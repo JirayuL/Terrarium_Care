@@ -9,6 +9,9 @@ $(document).ready(main());
 // light sensor
 // http://158.108.165.223/data/5910503855/lightsensor
 
+// height
+// http://158.108.165.223/data/5910503855/height
+
 var link = "http://158.108.165.223/data/5910503855";
 
 // Get the time when we call it.
@@ -32,14 +35,23 @@ function main() {
       // "key" : "value"
       url: link + "/temp"
     }).done((data) => {
-      $("#tempNow").val(data);
+      $("#tempNow").val(data + "°C");
     }).fail(() => {
       console.error("Temp is wrong.");
     })
   }, 1000);
 
-  setInterval(function functionName() {
-
+// Height
+  setInterval(() => {
+    $.ajax({
+      // "key" : "value"
+      url: link + "/height"
+    }).done((data) => {
+      // $("#heightNow").val(data + "cm");
+      document.getElementById('heightNow').innerHTML = data + "cm";
+    }).fail(() => {
+      console.error("Temp is wrong.");
+    })
   }, 1000);
 
   // Humidity
@@ -49,7 +61,7 @@ function main() {
       // "key" : "value"
       url: link + "/hum"
     }).done((data) => {
-      $("#humNow").val(data);
+      $("#humNow").val(data + "%");
     }).fail(() => {
       console.error("Humidity is wrong.");
     })
@@ -62,7 +74,7 @@ function main() {
       // "key" : "value"
       url: link + "/soil"
     }).done((data) => {
-
+      $("#soilNow").val(data + "%");
     }).fail(() => {
       console.error("Soil moisture is wrong.");
     })
@@ -75,58 +87,75 @@ function main() {
       // "key" : "value"
       url: link + "/lightsensor"
     }).done((data) => {
-      $("#lightNow").val(data);
+      $("#lightNow").val(data + "lx");
     }).fail(() => {
       console.error("Light sensor is wrong.");
     })
   }, 1000);
 }
-window.onload = function() {
 
-  var dps = []; // dataPoints
-
-  var chart = new CanvasJS.Chart("chartContainer", {
-    title: {
-      text: "Temperature",
-    },
-    data: [{
-      type: "line",
-      dataPoints: dps
-    }],
-    backgroundColor: "transparent"
-  });
-
-  var xVal = 0;
-  var yVal = 50;
-  var updateInterval = 100;
-  var dataLength = 500; // number of dataPoints visible at any point
-
-  var updateChart = function(count) {
-    count = count || 1;
-    // count is number of times loop runs to generate random dataPoints.
-
-    for (var j = 0; j < count; j++) {
-      yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-      dps.push({
-        x: xVal,
-        y: yVal
-      });
-      xVal++;
-    };
-    if (dps.length > dataLength) {
-      dps.shift();
-    }
-
-    chart.render();
-
-  };
-
-  // generates first set of dataPoints
-  updateChart(dataLength);
-
-  // update chart after specified time.
-  setInterval(function() {
-    updateChart()
-  }, updateInterval);
-
+function on() {
+  document.getElementById("overlay").style.display = "block";
 }
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+function on2() {
+  document.getElementById("overlay2").style.display = "block";
+}
+
+function off2() {
+  document.getElementById("overlay2").style.display = "none";
+}
+
+// window.onload = function() {
+//
+//   var dps = []; // dataPoints
+//
+//   var chart = new CanvasJS.Chart("chartContainer", {
+//     title: {
+//       text: "Temperature",
+//     },
+//     data: [{
+//       type: "line",
+//       dataPoints: dps
+//     }],
+//     backgroundColor: "transparent"
+//   });
+//
+//   var xVal = 0;
+//   var yVal = 50;
+//   var updateInterval = 100;
+//   var dataLength = 500; // number of dataPoints visible at any point
+//
+//   var updateChart = function(count) {
+//     count = count || 1;
+//     // count is number of times loop runs to generate random dataPoints.
+//
+//     for (var j = 0; j < count; j++) {
+//       yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
+//       dps.push({
+//         x: xVal,
+//         y: yVal
+//       });
+//       xVal++;
+//     };
+//     if (dps.length > dataLength) {
+//       dps.shift();
+//     }
+//
+//     chart.render();
+//
+//   };
+//
+//   // generates first set of dataPoints
+//   updateChart(dataLength);
+//
+//   // update chart after specified time.
+//   setInterval(function() {
+//     updateChart()
+//   }, updateInterval);
+//
+// }

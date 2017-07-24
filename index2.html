@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 
 <head>
   <title>ZEEDWea Project</title>
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-CJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-CJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,7 +18,7 @@
   <script src="index.js"></script>
 </head>
 
-<body style="background-color : #d3e29d">
+<body style="background-color : #d3e29d; height:inherit;">
   <nav>
     <div class="nav-wrapper" style="background-color: #b88747; height : 70px;">
       <a href="index.html" class="brand-logo"><img src = "png/logo.png" width="80px" height="50px"><k>ZEEDWea</k></a>
@@ -26,77 +26,133 @@
   </nav>
 
   <div class="container" style="text-align : center;">
-        <img src = "png/giphyy.gif" width="200px" height="150px">
-        <m>Profile</m>
-        <img src = "png/giphyy.gif" width="200px" height="150px">
-    <div class="dropdown" style="">
-      <button class="btn btn-primary dropdown-toggle" id="profile" type="button" data-toggle="dropdown">Please choose your profile
-            <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#">myTerrarium</a></li>
-        <li><a href="#">myTerrarium2</a></li>
-        <li class="divider"></li>
-        <li><a href="#">---Create new---</a></li>
-      </ul>
+    <div class="container">
+      <img src="png/giphyy.gif" width="200px" height="150px">
+      <m style="font-size : 60px;">Profile</m>
+      <img src="png/giphyy.gif" width="200px" height="150px">
+    </div>
+
+    <p style="color : green;">Please select the profile :
+      <button style="color:black;" onclick="on()">myTerrarium</button></p>
+    <p style="margin-left: 35%;"><button onclick="on2()">myTerrarium2</button></p>
+    <a href="#">
+      <p>Create your own profile</p>
+    </a>
+    <div id="overlay" onclick="off()">
+      <div id="text" class="panel panel-default">
+        <div class="panel-heading">myTerrarium</div>
+        <table class="table">
+          <p></p>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Temperature</th>
+              <th>Humidity</th>
+              <th>Soil moisture</th>
+              <th>Light Intensity</th>
+              <th>Height</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th id="dateNow" scope="row">1</th>
+              <td id="tempNow">Mark</td>
+              <td id="humNow">Otto</td>
+              <td id="soilNow">@mdo</td>
+              <td id="lightNow">@mdo</td>
+              <td id="heightNow">fjdksl</td>
+            </tr>
+            <tr>
+              <th scope="row">24/7/17</th>
+              <td>18.90°C</td>
+              <td>30.53%</td>
+              <td>25.12%</td>
+              <td>270 lx</td>
+              <td>10.8cm</td>
+            </tr>
+            <tr>
+              <th scope="row">23/7/17</th>
+              <td>19.20°C</td>
+              <td>35.85%</td>
+              <td>32.49%</td>
+              <td>360 lx</td>
+              <td>10.6cm</td>
+            </tr>
+            <tr>
+              <th scope="row">22/7/17</th>
+              <td>21.30°C</td>
+              <td>22.20%</td>
+              <td>45.34%</td>
+              <td>500 lx</td>
+              <td>10.4cm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="overlay2" onclick="off2()">
+      <div id="text" class="panel panel-default">
+        <div class="panel-heading">myTerrarium2</div>
+        <table class="table">
+          <p></p>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Temperature</th>
+              <th>Humidity</th>
+              <th>Soil moisture</th>
+              <th>Light Intensity</th>
+              <th>Height</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th id="dateNow" scope="row">25/7/17</th>
+              <td id="tempNow">20.00°C</td>
+              <td id="humNow">10.23%</td>
+              <td id="soilNow">50.32%</td>
+              <td id="lightNow">300 lx</td>
+              <td id="heightNow">50.1</td>
+            </tr>
+            <tr>
+              <th scope="row">24/7/17</th>
+              <td>35.00°C</td>
+              <td>20.53%</td>
+              <td>15.12%</td>
+              <td>600 lx</td>
+              <td>50.0cm</td>
+            </tr>
+            <tr>
+              <th scope="row">23/7/17</th>
+              <td>30.00°C</td>
+              <td>21.22%</td>
+              <td>16.12%</td>
+              <td>570 lx</td>
+              <td>50.0cm</td>
+            </tr>
+            <tr>
+              <th scope="row">22/7/17</th>
+              <td>25.93°C</td>
+              <td>65.20%</td>
+              <td>67.34%</td>
+              <td>200 lx</td>
+              <td>50.0cm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">Profile</div>
-    <table class="table">
-      <p></p>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Temperature</th>
-          <th>Humidity</th>
-          <th>Soil moisture</th>
-          <th>Light Intensity</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th id="dateNow" scope="row">1</th>
-          <td id="tempNow">Mark</td>
-          <td id="humNow">Otto</td>
-          <td id="soilNow">@mdo</td>
-          <td id="lightNow">@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">24/7/17</th>
-          <td>18.90°C</td>
-          <td>30.53%</td>
-          <td>25.12%</td>
-          <td>270 lx</td>
-        </tr>
-        <tr>
-          <th scope="row">23/7/17</th>
-          <td>19.20°C</td>
-          <td>35.85%</td>
-          <td>32.49%</td>
-          <td>360 lx</td>
-        </tr>
-        <tr>
-          <th scope="row">22/7/17</th>
-          <td>21.30°C</td>
-          <td>22.20%</td>
-          <td>45.34%</td>
-          <td>500 lx</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  </div>
-
-  <footer>
-    <nav>
-      <div class="nav-wrapper" style="background-color: #b88747">
-        <div class="footer">
-          <b style="margin-top : 10px; margin-left : 35%;">Copyright©2017 ZEEDWea Co.,Ltd. All rights reserved. Exceed Camp</b>
-        </div>
-      </div>
-    </nav>
-  </footer>
 </body>
+<footer style="position: absolute;
+right: 0;
+bottom: 0;
+left: 0;">
+  <nav>
+    <div class="nav-wrapper" style="background-color: #b88747; ">
+      <b style="margin-top : 10px; margin-left : 35%;">Copyright©2017 ZEEDWea Co.,Ltd. All rights reserved. Exceed Camp</b>
+    </div>
+  </nav>
+</footer>
 
 </html>

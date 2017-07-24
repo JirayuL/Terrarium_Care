@@ -36,12 +36,12 @@ textarea{
 	resize: none;
 }
 
-.brand-logo{ 
-	 text-shadow: 0.1em 0.1em 0.05em #656161; 
+.brand-logo{
+	 text-shadow: 0.1em 0.1em 0.05em #656161;
 }
 
 h5{
-	text-shadow: 0.1em 0.1em 0.05em #656161; 
+	text-shadow: 0.1em 0.1em 0.05em #656161;
 }
 
 .col-md-12{
@@ -56,4 +56,41 @@ textarea{
 	text-shadow: 0.1em 0.1em 0.05em #656161;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background: linear-gradient(#c48430,#b88747);
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#overlay2 {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+		font-size: 35px;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
