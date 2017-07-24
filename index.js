@@ -11,7 +11,7 @@ $(document).ready(main());
 
 function main() {
   // Temperature
-  // mock optimist temp = 20C
+  // mock optimist temp = 20C - 25C
   setInterval(() => {
     $.ajax({
       // "key" : "value"
@@ -24,7 +24,7 @@ function main() {
   }, 1000);
 
   // Humidity
-  // mock optimist humidity = 55%
+  // mock optimist humidity = 55% - 70%
   setInterval(() => {
     $.ajax({
       // "key" : "value"
@@ -37,7 +37,7 @@ function main() {
   }, 1000)
 
   //Soil moisture
-  // mock optimist soil moisture =
+  // mock optimist soil moisture = 53% - 60%
   setInterval(() => {
     $.ajax({
       // "key" : "value"
