@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Rally Interactive</title>
+  <title>ZEEDWea Project</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -26,7 +26,9 @@
   </nav>
 
   <div class="container" style="text-align : center;">
-    <m>Profile</m>
+        <img src = "png/giphyy.gif" width="200px" height="150px">
+        <m>Profile</m>
+        <img src = "png/giphyy.gif" width="200px" height="150px">
     <div class="dropdown" style="">
       <button class="btn btn-primary dropdown-toggle" id="profile" type="button" data-toggle="dropdown">Please choose your profile
             <span class="caret"></span></button>
@@ -46,30 +48,40 @@
       <thead>
         <tr>
           <th>Date</th>
-          <th>Humidity(%)</th>
-          <th>Soil moisture(%)</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Soil moisture</th>
           <th>Light Intensity</th>
-          <th>Temperature()</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <th id="dateNow" scope="row">1</th>
+          <td id="tempNow">Mark</td>
+          <td id="humNow">Otto</td>
+          <td id="soilNow">@mdo</td>
+          <td id="lightNow">@mdo</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <th scope="row">24/7/17</th>
+          <td>18.90°C</td>
+          <td>30.53%</td>
+          <td>25.12%</td>
+          <td>270 lx</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+          <th scope="row">23/7/17</th>
+          <td>19.20°C</td>
+          <td>35.85%</td>
+          <td>32.49%</td>
+          <td>360 lx</td>
+        </tr>
+        <tr>
+          <th scope="row">22/7/17</th>
+          <td>21.30°C</td>
+          <td>22.20%</td>
+          <td>45.34%</td>
+          <td>500 lx</td>
         </tr>
       </tbody>
     </table>

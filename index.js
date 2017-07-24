@@ -11,6 +11,19 @@ $(document).ready(main());
 
 var link = "http://158.108.165.223/data/5910503855";
 
+// Get the time when we call it.
+var d = new Date();
+// d.getHours();
+// d.getMinutes();
+// d.getSeconds();
+
+// tempNow
+// tempAva
+// lightNow
+// lightAva
+// humNow
+// humAva
+
 function main() {
   // Temperature
   // mock optimist temp = 20C - 25C
@@ -19,10 +32,14 @@ function main() {
       // "key" : "value"
       url: link + "/temp"
     }).done((data) => {
-
+      $("#tempNow").val(data);
     }).fail(() => {
       console.error("Temp is wrong.");
     })
+  }, 1000);
+
+  setInterval(function functionName() {
+
   }, 1000);
 
   // Humidity
@@ -32,7 +49,7 @@ function main() {
       // "key" : "value"
       url: link + "/hum"
     }).done((data) => {
-
+      $("#humNow").val(data);
     }).fail(() => {
       console.error("Humidity is wrong.");
     })
@@ -52,13 +69,13 @@ function main() {
   }, 1000)
 
   // light sensor
-  // mock optimist lightsensor = lux
+  // mock optimist lightsensor = 320–500lux
   setInterval(() => {
     $.ajax({
       // "key" : "value"
       url: link + "/lightsensor"
     }).done((data) => {
-
+      $("#lightNow").val(data);
     }).fail(() => {
       console.error("Light sensor is wrong.");
     })
