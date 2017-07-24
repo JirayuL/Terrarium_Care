@@ -42,3 +42,11 @@ li{
 textarea{
 	resize: none;
 }
+
+.brand-logo{ 
+	 text-shadow: 0.1em 0.1em 0.05em #656161; 
+}
+
+h5{
+	text-shadow: 0.1em 0.1em 0.05em #656161; 
+}

@@ -4,12 +4,13 @@ window.onload = function () {
 
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: "Temperature"
+            text: "Temperature",
         },
         data: [{
             type: "line",
             dataPoints: dps
-        }]
+        }],
+        backgroundColor: "transparent"
     });
 
     var xVal = 0;
