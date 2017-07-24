@@ -1,3 +1,23 @@
+k{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+m{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size : 70px;
+	color: #b88747;
+}
+
+p{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size : 35px;
+}
+
+n{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size : 35px;
+}
+
 button{
 	border-radius: 50%;
 }
@@ -10,11 +30,22 @@ li{
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.section{
-	border-bottom : solid 3px;
-	
+textarea{
+	resize: none;
+}
+
+.brand-logo{ 
+	 text-shadow: 0.1em 0.1em 0.05em #656161; 
+}
+
+h5{
+	text-shadow: 0.1em 0.1em 0.05em #656161; 
+}
+
+.col-md-12{
+	border-radius : 50px;
 }
 
 textarea{
-	resize: none;
+	background-color: white !important;
 }
