@@ -9,6 +9,8 @@ $(document).ready(main());
 // light sensor
 // http://158.108.165.223/data/5910503855/lightsensor
 
+var link = "http://158.108.165.223/data/5910503855";
+
 function main() {
   // Temperature
   // mock optimist temp = 20C - 25C
