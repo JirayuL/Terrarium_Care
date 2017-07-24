@@ -1,0 +1,20 @@
+button{
+	border-radius: 50%;
+}
+
+.hello{
+	text-align: center;
+}
+
+li{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.section{
+	border-bottom : solid 3px;
+	
+}
+
+textarea{
+	resize: none;
+}
