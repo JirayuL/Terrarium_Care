@@ -5,7 +5,7 @@ window.onload = function () {
 		var chart = new CanvasJS.Chart("chartContainer",{
 			title :{
 				text: "Humidity"
-			},			
+			},
 			data: [{
 				type: "line",
 				dataPoints: dps
@@ -14,35 +14,43 @@ window.onload = function () {
 		});
 
 		var xVal = 0;
-		var yVal = 100;	
-		var updateInterval = 100;
+		var yVal = 100;
+		var updateInterval = 1000;
 		var dataLength = 500; // number of dataPoints visible at any point
+		var temp = 0;
 
 		var updateChart = function (count) {
 			count = count || 1;
 			// count is number of times loop runs to generate random dataPoints.
-			
-			for (var j = 0; j < count; j++) {	
-				yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
-				dps.push({
-					x: xVal,
-					y: yVal
-				});
-				xVal++;
-			};
+
+			$.ajax({
+				// "key" : "value"
+				url: "http://158.108.165.223/data/5910503855/hum"
+			}).done((data) => {
+				temp = Math.round(data);
+			}).fail(() => {
+				console.error("Temp graph is wrong.");
+			})
+
+			yVal = temp;
+			dps.push({
+				x: xVal,
+				y: yVal
+			});
+			xVal++;
 			if (dps.length > dataLength)
 			{
-				dps.shift();				
+				dps.shift();
 			}
-			
-			chart.render();		
+
+			chart.render();
 
 		};
 
 		// generates first set of dataPoints
-		updateChart(dataLength); 
+		updateChart(dataLength);
 
-		// update chart after specified time. 
-		setInterval(function(){updateChart()}, updateInterval); 
+		// update chart after specified time.
+		setInterval(function(){updateChart()}, updateInterval);
 
 	}

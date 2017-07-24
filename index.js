@@ -118,9 +118,12 @@ setInterval(() => {
     }).done((data) => {
       // $("#lightNow").val(data + "lx");
       document.getElementById('lightNow').innerHTML = data + " lx";
-      // if (data < 200) {
-      //   alert("The light is so low. Terrarium needs light.");
-      // }
+      if (data < 200) {
+        // alert("The light is so low. Terrarium needs light.");
+        $.ajax(() => {
+          url: link + "/lightsensor/set/low"
+        }).done()
+      }
       // if (data > 700) {
       //   alert("The light is so bright. Terrarium needs shade.");
       // }
