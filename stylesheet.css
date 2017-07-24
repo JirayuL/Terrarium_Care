@@ -4,7 +4,8 @@ k{
 
 m{
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	font-size : 50px;
+	font-size : 70px;
+	color: #b88747;
 }
 
 p{
@@ -29,16 +30,6 @@ li{
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.section{
-
-	border-color : #b0bbb4; 
-	
-}
-
-.divider{
-	border-color: #b0bbb4;
-}
-
 textarea{
 	resize: none;
 }
@@ -49,4 +40,12 @@ textarea{
 
 h5{
 	text-shadow: 0.1em 0.1em 0.05em #656161; 
+}
+
+.col-md-12{
+	border-radius : 50px;
+}
+
+textarea{
+	background-color: white !important;
 }
