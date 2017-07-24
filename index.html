@@ -22,6 +22,8 @@
     </div>
   </nav>
 
+  <div class="alert alert-danger" role="alert" style="display:none" id="lotemp"><strong>Low Temperature!</strong> Terrarium needs a warm place.</div>
+  <div class="alert alert-danger" role="alert" style="display:none" id="hitemp"><strong>High Temperature!</strong> Terrarium needs a cool place.</div>
   <div class="alert alert-danger" role="alert" style="display:none" id="lohumal"><strong>Low Humidity!</strong> Terrarium needs watering.</div>
   <div class="alert alert-danger" role="alert" style="display:none" id="hihumal"><strong>Too High Humidity!</strong> Terrarium needs dehydrating.</div>
   <div class="alert alert-danger" role="alert" style="display:none" id="lolightal"><strong>Low Light!</strong> Terrarium needs light.</div>
@@ -43,91 +45,83 @@
             <div class="col-md-12" style="background-color : #FBDAAD;">
               <div class="col-md-4" style="text-align: center;">
                 <a href="index2.html"><button style="border: none;"> <br><img src = "png/001-love-plant.png" width="300px" height="300px" style="margin : 10px;"></button></a><br><br>
-                            </div>
-                            <div class="col-md-8" style="text-align: left;">
-                                <p style="color : green; margin-top : 20%;">See the profile of your Terrarium</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" style="text-align : right;">
-                    <div class="row">
-                        <div class="col-md-12" style="background-color : #FCBBC2;">
-                            <div class="col-md-8" style="text-align : right;">
-                                <!-- <div id="chartContainer" style="height: 300px; width:60%;"> -->
-                                <p style="color : red; margin-top : 10%;">See the temperature inside of Terrarium</p><br>
-                                <n>Temperature Now</n> <textarea disabled class="text_a" id="tempNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                                <n>Temperature Average</n> <textarea disabled class="text_a" id="tempAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea>
-                            </div>
-                            <div class="col-md-4" style="text-align : center;">
-                                <button style="border: none; margin-top : 15px;"> <br><img src = "png/005-temperature-2.png" width="300px" height="300px"></button><br><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="row">
-                        <div class="col-md-12" style="background-color : #FCFBB6;">
-                            <div class="col-md-4" style="text-align: center;">
-                                <button style="border: none;margin-top : 15px;"> <br><img src = "png/008-summer.png" width="300px" height="300px"></button><br><br>
-                            </div>
-                            <div class="col-md-8" style="text-align: left;">
-                                <p style="color : #E6DE06; margin-top : 10%;">See the Light Intensity that the plants received</p><br>
-                                <n>Light Intensity Now</n><textarea disabled class="text_a" id="lightNow" style="margin-left:75px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                                <n>Light Intensity Average</n><textarea disabled class="text_a" id="lightAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" style="text-align : right;">
-                    <div class="row">
-                        <div class="col-md-12" style="background-color : #B6FCF4;">
-                            <div class="col-md-8">
-                                <p style="color : #0CA9D5; margin-top : 10%;">See the humidity in the Terrarium</p><br>
-                                <n>Humidity Now</n><textarea disabled class="text_a" id="humNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                                <n>Humidity Average</n><textarea disabled class="text_a" id="humAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                            </div>
-                            <div class="col-md-4" style="text-align : center;">
-                                <button style="border: none; margin-top : 15px;"> <br><img src = "png/004-nature-1.png" width="300px" height="300px"></button><br><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" style="text-align : left;">
-                    <div class="row">
-                        <div class="col-md-12" style="background-color : #CC9466;">
-                            <div class="col-md-4">
-                                <button style="border: none; margin-top : 15px;"> <br><img src = "png/soil.gif" width="300px" height="300px"></button><br><br>
-                            </div>
-                            <div class="col-md-8" style="text-align : left;">
-                                <p style="color : #B8590A; margin-top : 10%;">See the moisture in the soil</p><br>
-                                <n>Soil Moisture Now</n><textarea disabled class="text_a" id="soilNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                                <n>Soil Moisture Average</n><textarea disabled class="text_a" id="soilAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;"
-                                    ;></textarea><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="col-md-8" style="text-align: left;">
+                <p style="color : green; margin-top : 20%;">See the profile of your Terrarium</p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <footer>
-        <nav>
-            <div class="nav-wrapper" style="background-color: #b88747">
-                <div class="footer">
-                    <b style="margin-top : 10px; margin-left : 35%;">Copyright©2017 ZEEDWea Co.,Ltd. All rights reserved. Exceed Camp</b>
-                 </div>
+        <div class="section" style="text-align : right;">
+          <div class="row">
+            <div class="col-md-12" style="background-color : #FCBBC2;">
+              <div class="col-md-8" style="text-align : right;">
+                <!-- <div id="chartContainer" style="height: 300px; width:60%;"> -->
+                <p style="color : red; margin-top : 10%;">See the temperature inside of Terrarium</p><br>
+                <n>Temperature Now</n> <textarea disabled class="text_a" id="tempNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+                <n>Temperature Average</n> <textarea disabled class="text_a" id="tempAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea>
+              </div>
+              <div class="col-md-4" style="text-align : center;">
+                <button style="border: none; margin-top : 15px;"> <br><img src = "png/005-temperature-2.png" width="300px" height="300px"></button><br><br>
+              </div>
             </div>
-        </nav>
-    </footer>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="row">
+            <div class="col-md-12" style="background-color : #FCFBB6;">
+              <div class="col-md-4" style="text-align: center;">
+                <button style="border: none;margin-top : 15px;"> <br><img src = "png/008-summer.png" width="300px" height="300px"></button><br><br>
+              </div>
+              <div class="col-md-8" style="text-align: left;">
+                <p style="color : #E6DE06; margin-top : 10%;">See the Light Intensity that the plants received</p><br>
+                <n>Light Intensity Now</n><textarea disabled class="text_a" id="lightNow" style="margin-left:75px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+                <n>Light Intensity Average</n><textarea disabled class="text_a" id="lightAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" style="text-align : right;">
+          <div class="row">
+            <div class="col-md-12" style="background-color : #B6FCF4;">
+              <div class="col-md-8">
+                <p style="color : #0CA9D5; margin-top : 10%;">See the humidity in the Terrarium</p><br>
+                <n>Humidity Now</n><textarea disabled class="text_a" id="humNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+                <n>Humidity Average</n><textarea disabled class="text_a" id="humAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+              </div>
+              <div class="col-md-4" style="text-align : center;">
+                <button style="border: none; margin-top : 15px;"> <br><img src = "png/004-nature-1.png" width="300px" height="300px"></button><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" style="text-align : left;">
+          <div class="row">
+            <div class="col-md-12" style="background-color : #CC9466;">
+              <div class="col-md-4">
+                <button style="border: none; margin-top : 15px;"> <br><img src = "png/soil.gif" width="300px" height="300px"></button><br><br>
+              </div>
+              <div class="col-md-8" style="text-align : left;">
+                <p style="color : #B8590A; margin-top : 10%;">See the moisture in the soil</p><br>
+                <n>Soil Moisture Now</n><textarea disabled class="text_a" id="soilNow" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+                <n>Soil Moisture Average</n><textarea disabled class="text_a" id="soilAva" style="margin-left:20px; width : 70px; height : 25px; border-radius : 10px;" ;></textarea><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <nav>
+      <div class="nav-wrapper" style="background-color: #b88747">
+        <div class="footer">
+          <b style="margin-top : 10px; margin-left : 35%;">Copyright©2017 ZEEDWea Co.,Ltd. All rights reserved. Exceed Camp</b>
+        </div>
+      </div>
+    </nav>
+  </footer>
 </body>
 
 </html>
